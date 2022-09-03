@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Paper, IconButton } from '@mui/material'
 import { Search } from '@mui/icons-material'
-import { border } from '@mui/system'
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
