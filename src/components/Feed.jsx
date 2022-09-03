@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 
-import Sidebar from './Sidebar'
+import { fetchFromAPI } from '../utils/fetchFromAPI'
+import { Sidebar, Videos } from './'
 
 const Feed = () => {
+  const [selectedCategory, setSelectedCategory] = useState('New')
+
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+  }, [selectedCategory])
+
   return (
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
       <Box
@@ -30,6 +37,7 @@ const Feed = () => {
           New <span style={{ color: '#f31503' }}>Videos</span>
         </Typography>
       </Box>
+      <Videos />
     </Stack>
   )
 }
