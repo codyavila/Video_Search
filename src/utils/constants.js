@@ -12,6 +12,8 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy'
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode'
 
+export const logo = 'https://i.imgur.com/lz2DYOw.png'
+
 export const categories = [
   { name: 'New', icon: <HomeIcon /> },
   { name: 'MKBHD', icon: <CodeIcon />},
